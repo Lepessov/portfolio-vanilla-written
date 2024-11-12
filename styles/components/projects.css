@@ -1,0 +1,141 @@
+.projects__slider {
+    display: flex;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects__images-main {
+    border-radius: 2%;
+}
+
+.projects__images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects__images-slider {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.projects__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.projects__text {
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+}
+
+.projects__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-white);
+    text-transform: uppercase;
+}
+
+.projects__images-item:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.projects__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    border: solid 1px var(--clr-slate800);
+    padding: 0.5rem;
+}
+
+.projects__wrapper {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.projects__link {
+    display: inline;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    color: var(--clr-rose);
+}
+
+.projects__title-main {
+    font-size: var(--size-3xl);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .projects__text {
+        font-size: var(--size-lg);
+    }
+
+    .projects__title {
+        font-size: var(--size-3xl);
+    }
+
+    .projects__title-main {
+        font-size: var(--size-3xl);
+    
+    }
+
+    .projects__link {
+        width: var(--size-4xl);
+        height: var(--size-4xl);
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .projects__text {
+        font-size: var(--size-xl);
+    }
+
+    .projects__title {
+        font-size: var(--size-4xl);
+    
+    }
+
+    .projects__title-main {
+        font-size: var(--size-4xl);
+    
+    }
+
+    .projects__link {
+        width: var(--size-5xl);
+        height: var(--size-5xl);
+    }
+}
+
+/* md */
+/* @media (min-width: 768px) {
+    
+} */
+
+/* lg */
+/* @media (min-width: 1024px) {
+  
+} */
+
+/* xl */
+@media (min-width: 1280px) {
+    .projects {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+   
+} */
+

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev server</title>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="#" class="logo">DL.</a>
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">about</a>
+          </li>
+          <li>
+            <a class="header__link" href="#projects">projects</a>
+          </li>
+          <li>
+            <a class="header__link btn" href="mailto:lepessov.daulet@gmail.com" target="_blank">contact</a>
+          </li>
+        </ul>
+        <button class="header__burger">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li><a href="#about" class="mobile-nav__link">about</a></li>
+          <li><a href="#projects" class="mobile-nav__link">projects</a></li>
+          <li><a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="mobile-nav__link">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <section class="hero container section">
+        <div class="hero__info">
+          <h1 class="hero__title">WEB <strong><span id="developer" class="typing"></span></strong></h1>
+          <p class="hero__description">
+            Hi, I’m Daulet, a web developer passionate about creating
+            engaging and user-friendly web experiences.
+          </p>
+          <div>
+            <a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="hero__btn btn">Contact</a>
+          </div>
+        </div>
+        <img load="lazy"  class="hero__img" src="/hero.jpeg" alt="profile picture">
+      </section>
+      
+      <section id="about" class="container section">
+        <h1 class="about__title">About</h1>
+        <div class="about">
+        <div class="about__img -wrapper">
+          <img load="lazy"  class="about__img" src="./outside.jpeg" alt="about picture">
+        </div>
+        <div class="about__text">
+          <p>
+            Hi, I’m Daulet, a <strong>full-stack web developer</strong> and recent graduate from SDU University (2024). 
+            I specialize in creating custom websites that are both functional and user-friendly. 
+            
+          </p>
+          <p>
+            As a freelancer, I work with clients to bring their ideas to life through clean, efficient code.
+            In addition to coding, I maintain <a href="https://www.youtube.com/@Lepessov_d" target="_blank">YouTube</a>, <a href="https://www.tiktok.com/@lepessov_d" target="_blank">TikTok</a>, and <a href="https://www.instagram.com/lepessov_" target="_blank">Instagram</a> channels where I share my work process, tips, and insights into the world of web development.
+            If you need a website or want to connect, feel free to reach out—I’d love to help!
+          </p>
+
+          <hr class="about__hr" />
+
+          <h3 class="about__subtitle">My Stack: </h3>
+          <div class="about__ul-container">
+
+            <ul class="about__ul">
+              <li class="about__list">JavaScript (ES6+)</li>
+              <li class="about__list">PHP</li>
+              <li class="about__list">CSS</li>
+            </ul>
+
+            <ul class="about__ul">
+              <li class="about__list">ReactJS</li>
+              <li class="about__list">Laravel</li>
+              <li class="about__list">HTML</li>
+            </ul>
+
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container section">
+        <h1 class="projects__title-main">Projects</h1>
+        <div class="projects">
+          <div class="projects__card">
+            <div class="projects__images">
+              <div>
+                <a href = "#" data-id = "1">
+                  <img load="lazy"  class="projects__images-main" src="./astra_project/main_page.png" alt="project picture">
+                </a>
+              </div>
+              <div class="projects__images-slider">
+                <div>
+                  <a href = "#" data-id = "2">
+                    <img load="lazy" class="projects__images-item" src="./astra_project/main_page.png" alt="project picture 1">
+                  </a>
+                </div>
+                <div>
+                  <a href = "#" data-id = "3">
+                    <img load="lazy" class="projects__images-item" src="./astra_project/pop_up.png" alt="project picture 2">
+                  </a>
+                </div>
+                <div>
+                  <a href = "#" data-id = "4">
+                    <img load="lazy" class="projects__images-item" src="./astra_project/register.png" alt="project picture 3">
+                  </a>
+                </div>
+            </div>
+            </div>
+            <div class="projects__info">
+              <div class="projects__wrapper">
+                <h2 class="projects__title">
+                  Astra Website
+                </h2>
+                  <a href="https://astra-diploma.vercel.app/login" target="_blank" class="projects__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                  </svg>
+                </a>
+              </div>
+              <p class="projects__text">
+                The platform aims to connect students, educators, and universities, creating a centralized space for learning, support, and professional connections. It helps students access valuable resources while giving teachers and universities a broader reach to assist and engage with a wider audience.
+              </p>
+            </div>
+          </div>
+          <div class="projects__card">
+            <div class="projects__images">
+              <div>
+                <a href = "#" data-id = "1">
+                  <img load="lazy" class="projects__images-main" src="./3d_project/main_menu.png" alt="project picture">
+                </a>
+              </div>
+              <div class="projects__images-slider">
+                <div>
+                  <a href = "#" data-id = "2">
+                    <img load="lazy" class="projects__images-item" src="./3d_project/legs.png" alt="project picture 1">
+                  </a>
+                </div>
+                <div>
+                  <a href = "#" data-id = "3">
+                    <img load="lazy" class="projects__images-item" src="./3d_project/main_menu.png" alt="project picture 2">
+                  </a>
+                </div>
+                <div>
+                  <a href = "#" data-id = "4">
+                    <img load="lazy" class="projects__images-item" src="./3d_project/door_color.png" alt="project picture 3">
+                  </a>
+                </div>
+            </div>
+            </div>
+            <div class="projects__info">
+              <div class="projects__wrapper">
+                <h2 class="projects__title">
+                  3D Furniture Redactor
+                </h2>
+                  <a href="https://lepessov-project.netlify.app/" target="_blank" class="projects__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                  </svg>
+                </a>
+              </div>
+              <p class="projects__text">
+                This platform lets users customize furniture in 3D, including options for legs, handles, door colors, and textures. With an interactive interface, customers can instantly visualize and personalize their pieces before purchase.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="container contact section">
+        <div class="contact__info">
+          <h1 class="contact__title">Get Your Project Started Today</h1>
+          <p class="contact__text">Ready to bring your vision to life? Contact me for a personalized quote and consultation.</p>
+          <a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="btn contact__btn">Contact</a>
+        </div>
+      </section>
+    </main>
+    <footer class="container end section"><p> Lepessov Daulet </p></footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

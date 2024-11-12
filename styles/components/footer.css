@@ -1,0 +1,7 @@
+.end {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--clr-slate600);
+}

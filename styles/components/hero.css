@@ -77,12 +77,9 @@
 
 /* lg */
 @media (min-width: 1024px) {
-    .hero__img {
-        display: inline;
-    }
 
     .hero__info {
-        text-align: start;
+        text-align: center;
     }
 
     .hero__title {
@@ -96,9 +93,14 @@
 }
 
 /* xl */
-/* @media (min-width: 1280px) {
-    
-} */
+@media (min-width: 1280px) {
+    .hero__img {
+        display: inline;
+    }
+    .hero__info {
+        text-align: start;
+    }
+}
 
 /* 2xl */
 /* @media (min-width: 1536px) {

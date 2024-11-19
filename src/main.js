@@ -1,20 +1,20 @@
 import '../styles/modern-normalize.css'
 import '../styles/style.css'
-import '../styles/components/header.css'
 import '../styles/components/hero.css'
 import '../styles/components/about.css'
 import '../styles/components/projects.css'
 import '../styles/components/contact.css'
 import '../styles/components/footer.css'
 import '../styles/components/mobile.css'
-import '../styles/utils.css'
+import '../styles/components/about_me.css'
+import '../styles/components/cta.css'
+import '../styles/components/process.css'
+import '../styles/components/darkMode.css'
 
-import mobileNav from './utils/mobile'
-import slider from './utils/slider'
-import typing from './utils/typing'
+import navbar from './utils/mobile'
+import darkMode from './utils/darkmode'
 
-slider()
-mobileNav();
-typing();
+navbar();
+darkMode();
 
 

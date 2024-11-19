@@ -10,189 +10,445 @@
     <title>Dev server</title>
   </head>
   <body>
-    <header class="header container">
-      <a href="#" class="logo">DL.</a>
-      <nav>
-        <ul class="header__menu">
-          <li>
-            <a class="header__link" href="#about">about</a>
-          </li>
-          <li>
-            <a class="header__link" href="#projects">projects</a>
-          </li>
-          <li>
-            <a class="header__link btn" href="mailto:lepessov.daulet@gmail.com" target="_blank">contact</a>
-          </li>
-        </ul>
-        <button class="header__burger">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
-        </button>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+<header id="cs-navigation">
+  <div class="cs-container">
+      <!--Nav Logo-->
+      <!--Logo is turned white in the css with a filter on dark mode-->
+      <a href="" class="cs-logo" aria-label="back to home">
+      </a>
+      <!--Navigation List-->
+      <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+              <div class="cs-box" aria-hidden="true">
+                  <span class="cs-line cs-line1" aria-hidden="true"></span>
+                  <span class="cs-line cs-line2" aria-hidden="true"></span>
+                  <span class="cs-line cs-line3" aria-hidden="true"></span>
+              </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+              <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                  <li class="cs-li">
+                      <a href="#" class="cs-li-link cs-active">
+                          Домой
+                      </a>
+                  </li>
+                  <li class="cs-li">
+                      <a href="#sbsr-1363" class="cs-li-link">
+                          Мои услуги
+                      </a>
+                  </li>
+                  <li class="cs-li">
+                    <a href="#blog-1347" class="cs-li-link">
+                        Проекты
+                    </a>
+                </li>
+              </ul>
+          </div>
       </nav>
-    </header>
-    <div class="mobile-nav">
-      <nav>
-        <ul class="mobile-nav__menu">
-          <li><a href="#about" class="mobile-nav__link">about</a></li>
-          <li><a href="#projects" class="mobile-nav__link">projects</a></li>
-          <li><a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="mobile-nav__link">contact</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="cs-contact-group">
+          <a href="https://wa.link/wpjif5" target="_blank" class="cs-phone">
+              <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+              +7 771 331 91 58
+          </a>
+          <div class="cs-social">
+              <a href="https://www.instagram.com/lepessov_/" target="_blank" class="cs-social-link">
+                  <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+              </a>
+              <a href="https://www.youtube.com/@Lepessov_d" target="_blank" class="cs-social-link">
+                  <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+              </a>
+          </div>
+      </div>
+      <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+      <button id="dark-mode-toggle" aria-label="dark mode toggle">
+          <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+          <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+      </button>
+  </div>
+</header>
+                              
     <main>
-      <section class="hero container section">
-        <div class="hero__info">
-          <h1 class="hero__title">WEB <strong><span id="developer" class="typing"></span></strong></h1>
-          <p class="hero__description">
-            Hi, I’m Daulet, a web developer passionate about creating
-            engaging and user-friendly web experiences.
-          </p>
-          <div>
-            <a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="hero__btn btn">Contact</a>
-          </div>
+      <!-- ============================================ -->
+      <!--                    Hero                      -->
+      <!-- ============================================ -->
+
+      <section id="hero-1619">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">
+                    ПЕРСОНАЛЬНЫЙ ПОДХОД И ВНИМАНИЕ К МЕЛОЧАМ
+                </span>
+                <h1 class="cs-title">Создаю уникальные сайты для вашего бизнеса</h1>
+                <a href="https://wa.link/wpjif5" class="cs-button-solid">Связаться со мной</a>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="icon" width="48" height="48">
+                    <h3 class="cs-h3"> Высокая скорость и производительность</h3>
+                    <p class="cs-item-text">
+                      Без использования конструкторов, я создаю сайты, которые загружаются быстро и работают без сбоев, что улучшает пользовательский опыт и SEO.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg" alt="icon" width="48" height="48">
+                    <h3 class="cs-h3">Индивидуальный дизайн</h3>
+                    <p class="cs-item-text">
+                        Каждый сайт разрабатывается с нуля, что позволяет создавать уникальный дизайн и функционал, полностью соответствующий вашему бизнесу.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
+                    <h3 class="cs-h3">Адаптивность на всех устройствах</h3>
+                    <p class="cs-item-text">
+                      Мои сайты автоматически подстраиваются под любые экраны — от мобильных телефонов до больших мониторов.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
+                    <h3 class="cs-h3">Мобильный-first дизайн</h3>
+                    <p class="cs-item-text">
+                      Сайты, оптимизированные для мобильных устройств с самого начала, обеспечивают отличный опыт на любых экранах.
+                    </p>
+                </li>
+            </ul>
         </div>
-        <img load="lazy"  class="hero__img" src="/hero.jpeg" alt="profile picture">
+
+        <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="./hero_image.jpg">
+            <source media="(min-width: 601px)" srcset="./hero_image.jpg">
+            <img decoding="async" src="./hero_image.jpg" alt="meeting" width="2250" height="1500" aria-hidden="true">
+        </picture>
       </section>
+                              
       
-      <section id="about" class="container section">
-        <h1 class="about__title">About</h1>
-        <div class="about">
-        <div class="about__img -wrapper">
-          <img load="lazy"  class="about__img" src="./outside.jpeg" alt="about picture">
-        </div>
-        <div class="about__text">
-          <p>
-            Hi, I’m Daulet, a <strong>full-stack web developer</strong> and recent graduate from SDU University (2024). 
-            I specialize in creating custom websites that are both functional and user-friendly. 
-            
-          </p>
-          <p>
-            As a freelancer, I work with clients to bring their ideas to life through clean, efficient code.
-            In addition to coding, I maintain <a href="https://www.youtube.com/@Lepessov_d" target="_blank">YouTube</a>, <a href="https://www.tiktok.com/@lepessov_d" target="_blank">TikTok</a>, and <a href="https://www.instagram.com/lepessov_" target="_blank">Instagram</a> channels where I share my work process, tips, and insights into the world of web development.
-            If you need a website or want to connect, feel free to reach out—I’d love to help!
-          </p>
-
-          <hr class="about__hr" />
-
-          <h3 class="about__subtitle">My Stack: </h3>
-          <div class="about__ul-container">
-
-            <ul class="about__ul">
-              <li class="about__list">JavaScript (ES6+)</li>
-              <li class="about__list">PHP</li>
-              <li class="about__list">CSS</li>
-            </ul>
-
-            <ul class="about__ul">
-              <li class="about__list">ReactJS</li>
-              <li class="about__list">Laravel</li>
-              <li class="about__list">HTML</li>
-            </ul>
-
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section id="projects" class="container section">
-        <h1 class="projects__title-main">Projects</h1>
-        <div class="projects">
-          <div class="projects__card">
-            <div class="projects__images">
-              <div>
-                <a href = "#" data-id = "1">
-                  <img load="lazy"  class="projects__images-main" src="./astra_project/main_page.png" alt="project picture">
-                </a>
-              </div>
-              <div class="projects__images-slider">
-                <div>
-                  <a href = "#" data-id = "2">
-                    <img load="lazy" class="projects__images-item" src="./astra_project/main_page.png" alt="project picture 1">
-                  </a>
-                </div>
-                <div>
-                  <a href = "#" data-id = "3">
-                    <img load="lazy" class="projects__images-item" src="./astra_project/pop_up.png" alt="project picture 2">
-                  </a>
-                </div>
-                <div>
-                  <a href = "#" data-id = "4">
-                    <img load="lazy" class="projects__images-item" src="./astra_project/register.png" alt="project picture 3">
-                  </a>
-                </div>
-            </div>
-            </div>
-            <div class="projects__info">
-              <div class="projects__wrapper">
-                <h2 class="projects__title">
-                  Astra Website
-                </h2>
-                  <a href="https://astra-diploma.vercel.app/login" target="_blank" class="projects__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                  </svg>
-                </a>
-              </div>
-              <p class="projects__text">
-                The platform aims to connect students, educators, and universities, creating a centralized space for learning, support, and professional connections. It helps students access valuable resources while giving teachers and universities a broader reach to assist and engage with a wider audience.
-              </p>
-            </div>
-          </div>
-          <div class="projects__card">
-            <div class="projects__images">
-              <div>
-                <a href = "#" data-id = "1">
-                  <img load="lazy" class="projects__images-main" src="./3d_project/main_menu.png" alt="project picture">
-                </a>
-              </div>
-              <div class="projects__images-slider">
-                <div>
-                  <a href = "#" data-id = "2">
-                    <img load="lazy" class="projects__images-item" src="./3d_project/legs.png" alt="project picture 1">
-                  </a>
-                </div>
-                <div>
-                  <a href = "#" data-id = "3">
-                    <img load="lazy" class="projects__images-item" src="./3d_project/main_menu.png" alt="project picture 2">
-                  </a>
-                </div>
-                <div>
-                  <a href = "#" data-id = "4">
-                    <img load="lazy" class="projects__images-item" src="./3d_project/door_color.png" alt="project picture 3">
-                  </a>
-                </div>
-            </div>
-            </div>
-            <div class="projects__info">
-              <div class="projects__wrapper">
-                <h2 class="projects__title">
-                  3D Furniture Redactor
-                </h2>
-                  <a href="https://lepessov-project.netlify.app/" target="_blank" class="projects__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                  </svg>
-                </a>
-              </div>
-              <p class="projects__text">
-                This platform lets users customize furniture in 3D, including options for legs, handles, door colors, and textures. With an interactive interface, customers can instantly visualize and personalize their pieces before purchase.
-              </p>
-            </div>
-          </div>
-        </div>
         
+        <!-- ============================================ -->
+        <!--             Side By Side Reverse             -->
+        <!-- ============================================ -->
+        
+        <section id="sbsr-1363">
+            <div class="cs-container">
+                <div class="cs-image-group">
+                    <picture class="cs-background">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/hero.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/hero.jpeg">
+                        <img loading="lazy" decoding="async" src="/hero.jpeg" alt="people" width="605868" height="690">
+                    </picture>
+                    <div class="cs-box">
+                        <span class="cs-desc">
+                            Лепесов Даулет
+                        </span>
+                        <span class="cs-position">
+                          Веб-разработчик
+                      </span>
+                    </div>
+                </div>
+                <div class="cs-content">
+                    <span class="cs-topper">Что я предлагаю?</span>
+                    <h2 class="cs-title">Сайты с 0% в рассрочку от 10 000 тг в месяц и выше</h2>
+                    <p class="cs-text">
+                      Я предлагаю создание стандартного 1-страничного сайта для малого бизнеса без предоплаты. Если вам нужно больше страниц или дополнительные функции, цена будет зависеть от объема работы. Минимальный контракт — 12 месяцев.
+                    </p>
+                    <ul class="cs-card-group">
+                        <li class="cs-item">
+                            <h3 class="cs-h3">
+                                <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trophy.svg" alt="icon" width="32" height="32">
+                                Индивидуальный подход
+                            </h3>
+                            <p class="cs-item-text">
+                              Каждый проект — уникален. Я создаю сайты, которые идеально подходят для вашего бизнеса и целей.
+                            </p>
+                        </li>
+                        <li class="cs-item">
+                            <h3 class="cs-h3">
+                                <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
+                                Безопасность и производительность
+                            </h3>
+                            <p class="cs-item-text">
+                              Мои сайты оптимизированы для быстрой работы и защищены от угроз, обеспечивая стабильность и безопасность.
+                            </p>
+                        </li>
+                        <li class="cs-item">
+                          <h3 class="cs-h3">
+                              <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
+                              Гарантия возврата денег
+                          </h3>
+                          <p class="cs-item-text">
+                            Если вы не довольны результатом, я предложу вам полный возврат средств. Моя цель — ваше удовлетворение и успех!
+                          </p>
+                      </li>
+                      <li class="cs-item">
+                        <h3 class="cs-h3">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
+                            Непревзойденная поддержка
+                        </h3>
+                        <p class="cs-item-text">
+                          Я всегда на связи! Предоставляю круглосуточную поддержку и помощь, чтобы ваш сайт всегда работал безупречно.
+                        </p>
+                    </li>
+                    </ul>
+                    <a href="https://wa.link/wpjif5" class="cs-button-solid">Связаться со мной</a>
+                </div>
+            </div>
+            <div class="cs-bubbles" aria-hidden="true"></div>
+        </section>
+                                        
+
+      <!-- ============================================ -->
+      <!--                 Recent Posts                 -->
+      <!-- ============================================ -->
+
+      <section id="blog-1347">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Мое портфолио</span>
+                <h2 class="cs-title">Мои проекты</h2>
+                <p class="cs-text">
+                    Посмотрите некоторые из веб-сайтов и веб-приложений, которые я разработал для малого и среднего бизнеса.
+                  </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a class="cs-link" href="https://demo.egenslab.com/html/tourxpro/demo/index.html" target="_blank">
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)"
+                                srcset="./tourism.png">
+                            <source media="(min-width: 601px)"
+                                srcset="./tourism.png">
+                            <img decoding="async"
+                                src="./tourism.png"
+                                alt="agency" width="413" height="374" aria-hidden="true">
+                        </picture>
+                        <div class="cs-item-text">
+                            <h3 class="cs-h3">
+                              Туристическое агентство: Шаблон для онлайн-бронирования
+                                <picture class="cs-icon-wrapper">
+                                    <img class="cs-icon" decoding="async"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                            alt="arrow" width="413" height="374" aria-hidden="true">
+                                </picture>
+                            </h3>
+                            <div class="cs-info">
+                                <span class="cs-date">
+                                  Для этого проекта я создал адаптивный и функциональный шаблон для туристического агентства. Веб-сайт включает все необходимые функции для удобного бронирования туров, поиска маршрутов и взаимодействия с клиентами.
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                  <a class="cs-link" href="https://astra-diploma.vercel.app/login" target="_blank">
+                      <picture class="cs-picture">
+                          <source media="(max-width: 600px)"
+                              srcset="./astra_project/login.png">
+                          <source media="(min-width: 601px)"
+                              srcset="./astra_project/login.png">
+                          <img decoding="async"
+                              src="./astra_project/login.png"
+                              alt="agency" width="413" height="374" aria-hidden="true">
+                      </picture>
+                      <div class="cs-item-text">
+                          <h3 class="cs-h3">
+                            Astra Portal: Платформа для студентов (в разработке)
+                              <picture class="cs-icon-wrapper">
+                                  <img class="cs-icon" decoding="async"
+                                          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                          alt="arrow" width="413" height="374" aria-hidden="true">
+                              </picture>
+                          </h3>
+                          <div class="cs-info">
+                              <span class="cs-date">
+                                Astra Portal — это образовательная онлайн-платформа, предназначенная для студентов. Сейчас проект находится на стадии разработки, и мы активно работаем над его запуском.
+                              </span>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              <li class="cs-item">
+                <a class="cs-link" href="/">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="./project.png">
+                        <source media="(min-width: 601px)"
+                            srcset="./project.png">
+                        <img decoding="async"
+                            src="./project.png"
+                            alt="agency" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">
+                          Мой текущий портфолио-сайт
+                            <picture class="cs-icon-wrapper">
+                                <img class="cs-icon" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                        alt="arrow" width="413" height="374" aria-hidden="true">
+                            </picture>
+                        </h3>
+                        <div class="cs-info">
+                            <span class="cs-date">
+                              Этот сайт — моя витрина для демонстрации веб-разработок. Он имеет адаптивный дизайн, оптимизацию для мобильных устройств и SEO. Разработан с акцентом на лучший пользовательский опыт и высокую производительность.
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div class="cs-bubbles" aria-hidden="true"></div>
       </section>
 
-      <section class="container contact section">
-        <div class="contact__info">
-          <h1 class="contact__title">Get Your Project Started Today</h1>
-          <p class="contact__text">Ready to bring your vision to life? Contact me for a personalized quote and consultation.</p>
-          <a href="mailto:lepessov.daulet@gmail.com" target="_blank" class="btn contact__btn">Contact</a>
+      <!-- ============================================ -->
+      <!--                 Side By Side                 -->
+      <!-- ============================================ -->
+
+      <section id="sbs-1308">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <!--Floating Box-->
+                <div class="cs-box">
+                    <span class="cs-desc">Помогаю расти малому бизнесу</span>
+                </div>
+                <!--Image-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="./outside.jpeg">
+                    <source media="(min-width: 601px)" srcset="./outside.jpeg">
+                    <img loading="lazy" decoding="async" src="./outside.jpeg" alt="meeting" width="630" height="630" aria-hidden="true">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">Обо мне</span>
+                <h2 class="cs-title">Привет! Меня зовут Даулет!</h2>
+                <p class="cs-text">
+                  Я — Даулет, fullstack веб-разработчик с двухлетним опытом работы в компаниях Алматы. Моя цель — помогать малому бизнесу создавать качественные сайты. Я окончил СДУ и использую современные технологии для разработки эффективных и безопасных веб-решений.
+                </p>  
+                <a class="cs-button-solid" aria-label="learn more about our programs" href="https://wa.link/wpjif5">Связаться со мной</a>
+            </div>
         </div>
       </section>
+
+      <!-- ============================================ -->
+      <!--                     CTA                      -->
+      <!-- ============================================ -->
+
+      <section id="cta-697">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">Готовы начать? Свяжитесь со мной!</h2>
+                <a href="https://wa.link/wpjif5" class="cs-button-solid">Связаться со мной</a>
+            </div>
+        </div>
+        <!--SVG Waves Background-->
+        <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+      </section>
+
+      <!-- ============================================ -->
+      <!--                   Steps                      -->
+      <!-- ============================================ -->
+
+      <section id="steps-889">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Мой процесс работы</span>
+                <h2 class="cs-title">Процесс создания продукта</h2>
+                <p class="cs-text">
+                  Мы начинаем с обсуждения ваших потребностей, разрабатываем дизайн, учитывая все ваши пожелания, затем я создаю функциональный сайт с использованием современных технологий
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Знакомство и обсуждение проекта</h3>
+                    <p class="cs-item-p">
+                      Мы начинаем с разговора, чтобы понять ваши потребности и цели для сайта.
+                    </p>
+                </li>
+                <!--Arrow-->
+                <li class="cs-item cs-arrow" aria-hidden="true">
+                    <img class="cs-arrow-img" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Farrow-curve-right.svg" alt="icon" width="80" height="76" loading="lazy" decoding="async" aria-hidden="true">
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Создание дизайна</h3>
+                    <p class="cs-item-p">
+                      Я разрабатываю дизайн, учитывая ваши пожелания, и вношу исправления до идеального результата.
+                    </p>
+                </li>
+                <!--Arrow-->
+                <li class="cs-item cs-arrow" aria-hidden="true">
+                    <img class="cs-arrow-img" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Farrow-curve-right.svg" alt="icon" width="80" height="76" loading="lazy" decoding="async" aria-hidden="true">
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Разработка и кодирование</h3>
+                    <p class="cs-item-p">
+                      После утверждения дизайна я приступаю к разработке сайта с использованием современных технологий.
+                    </p>
+                </li>
+            </ul>
+        </div>
+      </section>
+                              
     </main>
-    <footer class="container end section"><p> Lepessov Daulet </p></footer>
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="cs-footer-308">
+      <div class="cs-container">
+          <!-- Logo Group -->
+          <div class="cs-logo-group">
+              <p class="cs-text">
+                Вместе мы решим задачи, преодолеем трудности и сделаем ваш сайт мощным инструментом для успеха. Я готов поддерживать вас на каждом этапе пути.
+              </p>
+          </div>
+          <!-- Links -->
+          <ul class="cs-nav">
+              <li class="cs-nav-li">
+                  <span class="cs-header">Карта сайта</span>
+              </li>
+              <li class="cs-nav-li">
+                  <a class="cs-nav-link" href="#">Домой</a>
+              </li>
+              <li class="cs-nav-li">
+                  <a class="cs-nav-link" href="#sbsr-1363">Мои услуги</a>
+              </li>
+              <li class="cs-nav-li">
+                  <a class="cs-nav-link" href="#blog-1347">Проекты</a>
+              </li>
+
+          </ul>
+          <!-- Contact Info -->
+          <ul class="cs-nav">
+              <li class="cs-nav-li">
+                  <span class="cs-header">Связаться</span>
+              </li>
+              <li class="cs-nav-li">
+                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg" alt="phone" width="24" height="24">
+                  <a class="cs-nav-link cs-phone" href="https://wa.link/wpjif5">+7 771 331 9158</a>
+              </li>
+              <li class="cs-nav-li">
+                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg" alt="email" width="24" height="24">
+                  <a class="cs-nav-link cs-email" href="mailto:lepessov.daulet@gmail.com">lepessov.daulet@gmail.com</a>
+              </li>
+          </ul>
+      </div>
+    </footer>
+                              
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

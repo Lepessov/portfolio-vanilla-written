@@ -1,33 +1,24 @@
 :root {
-    --clr-dark: #070a13;
-    --clr-white: #FFFFFF;
-    --clr-slate400: ;
-    --clr-slate600: #8D99AE;
-    --clr-slate800: #2B2D42;
-    --clr-rose: #EF233B;
-    --clr-green: #00DF9A;
-
-    /* sizes */
-    --size-xxs: 0.5rem;
-    --size-xs: 0.75rem;
-    --size-sm: 0.875rem;
-    --size-base: 1rem;
-    --size-lg: 1.125rem;
-    --size-xl: 1.25rem;
-    --size-2xl: 1.5rem;
-    --size-3xl: 1.875rem;
-    --size-4xl: 2.25rem;
-    --size-5xl: 3rem;
-    --size-6xl: 3.75rem;
-    --size-7xl: 4.5rem;
-    --size-8xl: 6rem;
-    --size-9xl: 8rem;
-    --size-10xl: 10rem;
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-* {
-    margin: 0;
-    line-height: calc(1em + 0.5rem);
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
 }
 
 html {
@@ -35,10 +26,43 @@ html {
 }
 
 body {
-    font-family: "Poppins", serif;
-    background-color: var(--clr-dark);
-    color: var(--clr-white)
+    margin: 0;
+    padding: 0;
 }
+
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
 
 img,
 picture,
